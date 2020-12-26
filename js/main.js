@@ -11,7 +11,7 @@
 var userObj = {
     firstName: 'Aaron',
     lastName: 'Batashof',
-    age: 11,
+    age: 14,
   
     
 /*
@@ -78,7 +78,7 @@ console.log(defUpperStr()); // DEFAULT TEXT
 // console.log(evenFn(20)); // [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 function evenFn(n) {
     var array = [];
-    for (let i=0; i <= n; i++) {
+    for (var i=0; i <= n; i++) {
         if (i!=0) {
             if (i % 2 === 0) {
                 array.push(i);
@@ -103,7 +103,7 @@ console.log(evenFn(10));
  * В реализации функции обязательно должны быть использованы операторы switch / case / default.
  */
 function weekFn(n) {
-    let str = '';
+    var str = '';
   
     switch (n) {
       case 1:
@@ -159,7 +159,7 @@ function weekFn(n) {
  * Использование операторов if, switch – запрещено.
  */
 function ageClassification(n) {
-    let str = n < 0  ? null :  
+    var str = n < 0  ? null :  
         n <= 24 ? 'детский возраст':
         n <= 44 ? 'молодой возраст':
         n <= 65 ? 'средний возраст':
@@ -245,8 +245,8 @@ console.log(15, ageClassification(150));
 
 // пробовала делать с помощью оператора for
 function oddFn(n) {
-    const array = [];
-    let i;
+    var array = [];
+    var i;
     for (i = 0; i <= n; i++) {
         if (i % 2 === 1) {
         array.push(i);
@@ -260,8 +260,8 @@ console.log(oddFn(20));
 
 
 function oddFn(n) {
-    const array = [];
-    let i = 1;
+    var array = [];
+    var i = 1;
     while (i <= n) {
         if (i % 2 === 1) {
         array.push(i);
